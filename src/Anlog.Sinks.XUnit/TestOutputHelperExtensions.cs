@@ -12,7 +12,7 @@ namespace Anlog.Sinks.XUnit
         /// Writes logs from Anlog to xUnit test output helper.
         /// </summary>
         /// <param name="output">xUnit test output.</param>
-        public static void WriteAnlog(this ITestOutputHelper output)
+        public static void WriteLogs(this ITestOutputHelper output)
         {
             Log.Logger = new LoggerFactory()
                 .WriteTo.TestOutput(output)

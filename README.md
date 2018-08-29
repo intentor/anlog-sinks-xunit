@@ -19,7 +19,7 @@ Install *Anlog.Sinks.xUnit* from the NuGet Gallery in the test project:
 Install-Package Anlog.Sinks.xUnit
 ```
 
-In a xUnit test, receive the `ITestOutputHelper` through constructor and call the `WriteAnlog()` method:
+In a xUnit test, receive the `ITestOutputHelper` through constructor and call the `WriteLogs()` method:
 
 ```cs
 using Xunit;
@@ -32,7 +32,7 @@ namespace MyProject.Tests
     {
         public MyTest(ITestOutputHelper output)
         {
-            output.WriteAnlog();
+            output.WriteLogs();
         }
         
         [Fact]

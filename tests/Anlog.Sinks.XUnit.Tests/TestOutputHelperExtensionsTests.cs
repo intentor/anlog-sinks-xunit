@@ -10,11 +10,11 @@ namespace Anlog.Sinks.XUnit.Tests
     {
         public TestOutputHelperExtensionsTests(ITestOutputHelper output)
         {
-            output.WriteAnlog();
+            output.WriteLogs();
         }
 
         [Fact]
-        public void WhenProcessingOutputWithAnlog_SinkIsCreated()
+        public void WhenWritingLogsToTestOutput_SinkIsCreated()
         {
             Assert.NotNull(Log.Logger);
             Assert.Single(Log.Logger.Sinks);
