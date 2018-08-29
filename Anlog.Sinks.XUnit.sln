@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anlog.Sinks.XUnit", "src\Anlog.Sinks.xUnit\Anlog.Sinks.XUnit.csproj", "{1F825E26-8D78-4898-BA01-EE4CBA8711D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anlog.Sinks.XUnit", "src\Anlog.Sinks.XUnit\Anlog.Sinks.XUnit.csproj", "{1F825E26-8D78-4898-BA01-EE4CBA8711D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anlog.Sinks.XUnit.Tests", "tests\Anlog.Sinks.XUnit.Tests\Anlog.Sinks.XUnit.Tests.csproj", "{518113D3-B298-4A83-BAFE-31B4F237FF1D}"
 EndProject
