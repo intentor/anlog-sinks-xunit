@@ -13,10 +13,10 @@ Allows writing of logs to the xUnit test console using *[Anlog](https://github.c
 
 ## Quick start
 
-Install *Anlog.Sinks.Xunit* from the NuGet Gallery in the test project:
+Install *Anlog.Sinks.xUnit* from the NuGet Gallery in the test project:
 
 ```
-Install-Package Anlog.Sinks.Xunit
+Install-Package Anlog.Sinks.xUnit
 ```
 
 In a xUnit test, receive the `ITestOutputHelper` through constructor and call the `WriteAnlog()` method:
@@ -24,7 +24,7 @@ In a xUnit test, receive the `ITestOutputHelper` through constructor and call th
 ```cs
 using Xunit;
 using Xunit.Abstractions;
-using Anlog.Sinks.Xunit;
+using Anlog.Sinks.XUnit;
 
 namespace MyProject.Tests
 {
