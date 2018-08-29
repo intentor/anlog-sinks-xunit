@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.0</TargetFramework>
+        <Version>1.0.0</Version>
+        <AssemblyName>Anlog.Sinks.XUnit</AssemblyName>
+        <RootNamespace>Anlog.Sinks.XUnit</RootNamespace>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <IsPackable>true</IsPackable>
+        <Authors>André "Intentor" Martins</Authors>
+        <Description>Allows writing of logs to the xUnit test console using Anlog.</Description>
+        <PackageId>Anlog.Sinks.xUnit</PackageId>
+        <PackageTags>anlog;log;logger;logging;sink;xunit;test</PackageTags>
+        <PackageIconUrl>http://static.intentor.com.br/anlog/anlog-nuget-icon.png</PackageIconUrl>
+        <PackageProjectUrl>https://github.com/intentor/anlog-sinks-xunit</PackageProjectUrl>
+        <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/intentor/anlog-sinks-xunit</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <NugetPackagesFolder>../../nuget</NugetPackagesFolder>
+        <NugetApiKey>-</NugetApiKey>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Anlog" Version="1.1.1" />
+        <PackageReference Include="xunit" Version="2.4.0" />
+    </ItemGroup>
+    <Target Name="PublishLocal">
+        <Exec Command="dotnet pack --include-symbols -c Release -o $(NugetPackagesFolder)" />
+    </Target>
+    <Target Name="PublishNuget" DependsOnTargets="PublishLocal">
+        <Exec Command="dotnet nuget push $(NugetPackagesFolder)/$(AssemblyName).$(Version).nupkg -s https://api.nuget.org/v3/index.json -k $(NugetApiKey)" />
+        <Exec Command="git tag v$(Version)" />
+        <Exec Command="git push --tags" />
+    </Target>
+</Project>
