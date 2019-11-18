@@ -2,6 +2,8 @@
 
 **(Yet) Another .NET Logger - xUnit Sink**
 
+Currently the project is **DISCONTINUED**. However, feel free to fork it and continue its development!
+
 [![NuGet Version](http://img.shields.io/nuget/v/Anlog.Sinks.xUnit.svg?style=flat)](https://www.nuget.org/packages/Anlog.Sinks.xUnit/)
 
 Allows writing of logs to the xUnit test console using *[Anlog](https://github.com/intentor/anlog)*.
